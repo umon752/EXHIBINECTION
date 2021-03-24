@@ -1,0 +1,35 @@
+// 結構
+.btn {
+    @apply py-3 rounded text-center;
+}
+
+
+
+// 樣式
+.btn-primary {
+    @apply bg-primary text-white;
+}
+
+.btn-outline-primary {
+    @apply bg-transparent border border-primary text-primary;
+
+    &:hover {
+        @apply text-white;
+    }
+}
+
+.btn-primary-light {
+    @apply bg-primary-light text-white;
+}
+
+.btn-white {
+    @apply bg-white text-black;
+}
+
+.btn-outline-white {
+    @apply bg-transparent border border-white text-white;
+
+    &:hover {
+        @apply text-black;
+    }
+}

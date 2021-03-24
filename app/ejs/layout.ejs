@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <!-- material icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="z-50 sticky top-0 bg-white border border-secondary-200 py-6 md:py-12" data-aos="fade-down">
+    <div class="container relative flex justify-end items-center">
+      <h1 class="text-center overflow-hidden absolute right-0 left-0">
+        <a href="./index.html" class="logo text-primary text-xl">
+          EXHIBINECTION
+        </a>
+      </h1>
+      <ul class="flex items-center z-0">
+        <li class="relative overflow-hidden hidden md:block">
+          <a href="#" class="hover-reflective text-secondary-600 px-6">Sign in</a>
+        </li>
+        <li class="relative overflow-hidden hidden md:block">
+          <a href="#" class="hover-reflective text-secondary-500 px-6">Sign up</a>
+        </li>
+        <li class="relative">
+          <a href="#" class="pl-6 flex">
+            <span class="relative overflow-hidden inline-flex">
+              <span class="material-icons hover-reflective">confirmation_number</span>
+            </span>
+            <span class="badges flex justify-center align-middle z-10">
+              <span class="badges-count text-xs text-white">3</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <% if (banner == 'normal' ) { %>
+  <%- include ('banner.ejs') %>
+  <% } %>
+
+  <% if (navbar == 'normal' ) { %>
+  <%- include ('navbar.ejs') %>
+  <% } %>
+
+
+  <%- contents %>
+
+  <% if (footer == 'normal' ) { %>
+  <%- include ('footer.ejs') %>
+  <% } %>
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/all.js"></script>
+  <!-- <script src="./assets/js/aos-custom.js"></script> -->
+</body>
+
+
+</html>

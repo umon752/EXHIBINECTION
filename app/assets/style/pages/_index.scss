@@ -1,0 +1,25 @@
+.introImg {
+    @include img-cover(345px);
+
+    @screen md {
+        height: 350px;
+    }
+}
+
+.reviewBg {
+    // @include img-cover(482px);
+    @include bg-cover("../images/reviewImg.jpg", 482px);
+}
+
+.avatarImg {
+    @include img-cover(128px);
+    width: 128px;
+}
+
+// .likeImg {
+//     @include img-cover(345px);
+
+//     @screen md {
+//         height: 350px;
+//     }
+// }

@@ -1,0 +1,48 @@
+.btn-primary {
+    @apply bg-primary-light text-white opacity-100;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+
+    &::before {
+        content: "";
+        z-index: -1;
+        @apply bg-primary absolute top-0 right-0 left-0 bottom-0 rounded;
+        transform: scale(1);
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover {
+        &::before {
+            transform: scaleY(0);
+            @apply opacity-0;
+        }
+    }
+}
+
+
+
+.btn-outline-primary {
+    @apply bg-transparent border border-primary text-primary;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+
+    &::before {
+        content: "";
+        z-index: -1;
+        @apply bg-primary absolute top-0 right-0 left-0 bottom-0 rounded;
+        transform: scale(0);
+
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover {
+        @apply text-white;
+
+        &::before {
+            transform: scaleY(1);
+            @apply opacity-100;
+        }
+    }
+}

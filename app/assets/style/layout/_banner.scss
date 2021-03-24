@@ -1,0 +1,39 @@
+// .banner {
+//     @include bg-cover("../images/banner.jpg", 480px);
+// }
+
+.banner {
+    height: 480px;
+    @apply relative w-full;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.banner__img {
+    @apply absolute top-0 left-0 w-full h-full overflow-hidden flex flex-wrap;
+}
+
+.banner__img__item {
+    @apply relative block;
+    width: 4%; // 寬度使用 %，每個斷點尺寸圖片才會滿版，必須是 100 可以整除的數字
+    height: 50px;
+    animation: animate 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateZ(2000px);
+        background-image: url("../images/banner.jpg");
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        @apply bg-cover bg-center bg-fixed;
+        // background-attachment: fixed;
+    }
+
+    100% {
+        transform: translateZ(0);
+        background-image: url("../images/banner.jpg");
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+        @apply bg-cover bg-center bg-fixed;
+    }
+}
