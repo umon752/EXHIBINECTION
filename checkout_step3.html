@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>填寫付款資訊 | EXHIBINECTION</title>
+  <!-- material icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="z-50 sticky top-0 bg-white border border-secondary-200 py-6 md:py-12" data-aos="fade-down">
+    <div class="container relative flex justify-end items-center">
+      <h1 class="text-center overflow-hidden absolute right-0 left-0">
+        <a href="./index.html" class="logo text-primary text-xl">
+          EXHIBINECTION
+        </a>
+      </h1>
+      <ul class="flex items-center z-0">
+        <li class="relative overflow-hidden hidden md:block">
+          <a href="#" class="hover-reflective text-secondary-600 px-6">Sign in</a>
+        </li>
+        <li class="relative overflow-hidden hidden md:block">
+          <a href="#" class="hover-reflective text-secondary-500 px-6">Sign up</a>
+        </li>
+        <li class="relative">
+          <a href="#" class="pl-6 flex">
+            <span class="relative overflow-hidden inline-flex">
+              <span class="material-icons hover-reflective">confirmation_number</span>
+            </span>
+            <span class="badges flex justify-center align-middle z-10">
+              <span class="badges-count text-xs text-white">3</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+
+  
+
+
+  
+<section class="container mt-8 mb-16">
+    <div class="grid grid-cols-12 gap-5 md:gap-13">
+
+        <!-- stepBar -->
+        <div class="col-span-12 md:col-span-7 lg:col-span-8 md:order-1">
+            <div class="stepBar grid grid-cols-4 mb-20 md:mb-21">
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">確認訂單</span>
+                </div>
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">填寫訂購資訊</span>
+                </div>
+                <div class="stepBar__dot stepBar__dot--active col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">填寫付款資訊</span>
+                </div>
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">完成訂購</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- form -->
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 md:order-3 mb-10 md:mb-4">
+            <h2 class="text-lg font-medium leading-xl mb-6 md:mb-8">付款資訊</h2>
+            <form class="checkoutForm mb-21">
+                <div class="mb-8">
+                    <label for="creditCardNum" class="leading-base mb-1">信用卡帳號</label>
+                    <input type="text" id="creditCardNum" placeholder="Xxxx-xxxx-xxxx-xxxx"
+                        class="text-secondary-300 border border-secondary-200 rounded w-full mb-1 py-2 px-4">
+                </div>
+                <div class="mb-8">
+                    <label for="effectiveDate" class="leading-base mb-1">有效日期</label>
+                    <input type="text" id="effectiveDate" placeholder="(MM/YY)"
+                        class="text-secondary-300 border border-secondary-200 rounded w-full mb-1 py-2 px-4">
+                </div>
+                <div class="mb-8">
+                    <label for="securityCode" class="leading-base mb-1">安全碼</label>
+                    <input type="password" id="securityCode" placeholder="***"
+                        class="text-secondary-300 border border-secondary-200 rounded w-full mb-1 py-2 px-4">
+                </div>
+            </form>
+            <div class="flex items-center justify-between mb-2">
+                <span class="font-medium leading-base">小計</span>
+                <span class="font-light leading-sm">NT$1050</span>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+                <span class="font-medium leading-base">折扣</span>
+                <span class="font-light leading-sm">-NT$50</span>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="text-lg font-medium leading-xl">總金額</span>
+                <span class="text-lg font-medium leading-lg">NT$1000</span>
+            </div>
+        </div>
+
+        <!-- list -->
+        <ul class="col-span-12 md:col-span-7 lg:col-span-8 md:order-2 mb-20">
+            <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                <img src="./assets/images/img01.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                <div class="col-span-4 flex justify-between items-center relative">
+                    <div class="flex flex-col justify-between h-full">
+                        <h3 class="font-bold leading-base">2020 台味設計展</h3>
+                        <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                        <p class="text-secondary-600 leading-base">全票<span
+                                class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                    </div>
+                    <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                    <span class="text-lg font-bold">1</span>
+                </div>
+            </li>
+            <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                <img src="./assets/images/img02.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                <div class="col-span-4 flex justify-between items-center relative">
+                    <div class="flex flex-col justify-between h-full">
+                        <h3 class="font-bold leading-base">No.22 線上設計展</h3>
+                        <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                        <p class="text-secondary-600 leading-base">全票<span
+                                class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                    </div>
+                    <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                    <span class="text-lg font-bold">1</span>
+                </div>
+            </li>
+            <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                <img src="./assets/images/img03.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                <div class="col-span-4 flex justify-between items-center relative">
+                    <div class="flex flex-col justify-between h-full">
+                        <h3 class="font-bold leading-base">高雄設計節</h3>
+                        <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                        <p class="text-secondary-600 leading-base">全票<span
+                                class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                    </div>
+                    <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                    <span class="text-lg font-bold">1</span>
+                </div>
+            </li>
+        </ul>
+
+        <!-- btn -->
+        <div class="col-span-6 md:col-span-7 lg:col-span-8 md:order-4">
+            <a href="./checkout_step2.html"
+                class="btn btn-white border border-primary text-primary hover:text-white hover-telesto-primary inline-block w-full md:w-auto md:px-22"><span><span>返回</span></span>
+            </a>
+        </div>
+        <div class="col-span-6 md:col-span-5 lg:col-span-4 md:order-4">
+            <a href="./checkout_step4.html"
+                class="btn btn-primary-light hover-telesto-primary inline-block w-full"><span><span>下一步</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+  
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/custom/swiper.js"></script>
+  <script src="./assets/js/all.js"></script>
+  <!-- <script src="./assets/js/aos-custom.js"></script> -->
+</body>
+
+
+</html>

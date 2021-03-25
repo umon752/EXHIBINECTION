@@ -1,16 +1,36 @@
 "use strict";
 
-AOS.init({
-  easing: 'ease',
-  duration: 600,
-  once: true
-}); // addCart
-
+/* DOM */
+// addCart
 var addCartBtn = document.querySelector('.js-addCart');
 var cartList = document.querySelector('.cart');
 var body = document.querySelector('body'); // 讓 hideCart 在 showCart 執行後才可執行
 
-var toggleShow = false; // 顯示 aside
+var toggleShow = false;
+/* AOS */
+
+AOS.init({
+  easing: 'ease',
+  duration: 600,
+  once: true
+});
+/* banner 背景動態效果 */
+
+window.onload = init;
+var banner = document.getElementsByClassName('banner__img')[0];
+var bannerItem = document.getElementsByClassName('banner__img__item');
+
+function init() {
+  for (var i = 1; i < 400; i++) {
+    banner.innerHTML += "<div class=\"banner__img__item\"></div>";
+    var duration = Math.random() * 1100;
+    bannerItem[i].style.animationDuration = duration + 250 + 'ms';
+    bannerItem[i].style.animationDelay = duration - 50 + 'ms';
+  }
+}
+/* cartToggle*/
+// 顯示 aside
+
 
 function showCart(e) {
   e.stopPropagation();
@@ -33,20 +53,7 @@ function hideCart(e) {
 
 addCartBtn.addEventListener('click', showCart, false);
 cartList.addEventListener('click', unClick, false);
-body.addEventListener('click', hideCart, false); // banner 背景動態效果
-
-window.onload = init;
-var banner = document.getElementsByClassName('banner__img')[0];
-var bannerItem = document.getElementsByClassName('banner__img__item');
-
-function init() {
-  for (var i = 1; i < 400; i++) {
-    banner.innerHTML += "<div class=\"banner__img__item\"></div>";
-    var duration = Math.random() * 1100;
-    bannerItem[i].style.animationDuration = duration + 250 + 'ms';
-    bannerItem[i].style.animationDelay = duration - 50 + 'ms';
-  }
-}
+body.addEventListener('click', hideCart, false);
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -4830,7 +4837,7 @@ if (window.screen.width >= 768) {
     // effect: 'coverflow',
     // grabCursor: true,
     // centeredSlides: true,
-    slidesPerView: '3',
+    slidesPerView: 3,
     // centeredSlides: true,
     spaceBetween: 30 // coverflowEffect: {
     //     rotate: 50,
