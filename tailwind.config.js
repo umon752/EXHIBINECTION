@@ -30,6 +30,7 @@ module.exports = {
       '4xl': '32px',
       '5xl': '36px',
       '6xl': '40px',
+      '7xl': '44px',
     },
     fontWeight: {
       light: 300,

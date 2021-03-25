@@ -1,4 +1,4 @@
-// background
+// background 等比例
 @mixin bg-cover($url, $height) {
     background-image: url($url);
     height: $height;
@@ -7,7 +7,7 @@
 
 
 
-// img
+// img 等比例
 @mixin img-cover($height) {
     height: $height;
     @apply object-cover object-center w-full;
@@ -21,25 +21,6 @@
     transition-duration: $duration;
 }
 
-
-// @mixin hover-reflective($translateX) {
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         width: 15px;
-//         height: 100%;
-//         background: rgba(255, 255, 255, 0.5);
-//         transform: skewX(45deg) translateX($translateX);
-//         transition: 0s;
-//     }
-
-//     &:hover::before {
-//         transform: skewX(45deg) translateX(-$translateX);
-//         transition: .6s;
-//     }
-// }
 
 
 // btn:hover (箭頭位移效果)
@@ -67,8 +48,6 @@
 
     &::before {
         width: 135%;
-        // -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
-        // clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
         transform: translate3d(-100%, 0, 0);
     }
 

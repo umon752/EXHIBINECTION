@@ -7,7 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import "./base/base";
 @import './helpers/helpers';
 // @import '../../../node_modules/material-icons/css/material-icons.min';
 // @import './vendors/material-icons.min';
@@ -20,7 +19,7 @@
 @layer components {
   @import './components/button';
   @import './components/badges';
-  @import './components/form';
+  @import './components/input';
 }
 
 @layer utilities {
@@ -34,3 +33,4 @@
 @import './pages/index';
 @import './pages/product';
 @import './pages/product_detail';
+@import './pages/checkout';

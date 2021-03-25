@@ -1,0 +1,112 @@
+---
+title: 確認訂單 | EXHIBINECTION
+layout: ./app/ejs/layout.ejs
+engine: ejs
+current: checkout_step1
+banner: none
+navbar: none
+footer: none
+---
+
+<section class="container mt-8 mb-16">
+    <div class="grid md:grid-cols-12 md:gap-13">
+        <div class="md:col-span-7 lg:col-span-8">
+            <div class="stepBar grid grid-cols-4 mb-20 md:mb-21">
+                <div class="stepBar__dot stepBar__dot--active col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">確認訂單</span>
+                </div>
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">填寫訂購資訊</span>
+                </div>
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">填寫付款資訊</span>
+                </div>
+                <div class="stepBar__dot col-span-1">
+                    <span class="stepBar__text text-sm md:text-base font-light whitespace-no-wrap">完成訂購</span>
+                </div>
+            </div>
+            <ul class="checkoutList">
+                <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                    <img src="./assets/images/img01.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                    <div class="col-span-4 md:col-span-6 flex justify-between items-center relative">
+                        <div class="flex flex-col justify-between h-full">
+                            <h3 class="font-bold leading-base">2020 台味設計展</h3>
+                            <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                            <p class="text-secondary-600 leading-base">全票<span
+                                    class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                        </div>
+                        <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                        <div class="hidden md:flex md:flex-row items-center">
+                            <a href="#" class="material-icons hover:text-primary-light md:order-last md:ml-4">
+                                add
+                            </a>
+                            <span class="text-lg font-bold">01</span>
+                            <a href="#" class="material-icons hover:text-primary-light md:order-first md:mr-4">
+                                remove
+                            </a>
+                        </div>
+                        <a href="#"
+                            class="material-icons hover:text-secondary-400 absolute right-0 top-0 md:static">close</a>
+                    </div>
+                </li>
+                <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                    <img src="./assets/images/img02.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                    <div class="col-span-4 md:col-span-6 flex justify-between items-center relative">
+                        <div class="flex flex-col justify-between h-full">
+                            <h3 class="font-bold leading-base">No.22 線上設計展</h3>
+                            <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                            <p class="text-secondary-600 leading-base">全票<span
+                                    class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                        </div>
+                        <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                        <div class="hidden md:flex md:flex-row items-center">
+                            <a href="#" class="material-icons hover:text-primary-light md:order-last md:ml-4">
+                                add
+                            </a>
+                            <span class="text-lg font-bold">01</span>
+                            <a href="#" class="material-icons hover:text-primary-light md:order-first md:mr-4">
+                                remove
+                            </a>
+                        </div>
+                        <a href="#"
+                            class="material-icons hover:text-secondary-400 absolute right-0 top-0 md:static">close</a>
+                    </div>
+                </li>
+                <li class="grid grid-cols-8 gap-5 md:gap-13 mb-8">
+                    <img src="./assets/images/img03.jpg" class="checkoutImg col-span-4 md:col-span-2">
+                    <div class="col-span-4 md:col-span-6 flex justify-between items-center relative">
+                        <div class="flex flex-col justify-between h-full">
+                            <h3 class="font-bold leading-base">高雄設計節</h3>
+                            <h4 class="font-medium leading-base">01 JUN — 31 OCT</h4>
+                            <p class="text-secondary-600 leading-base">全票<span
+                                    class="md:hidden text-lg font-bold leading-lg ml-1">1</span> </p>
+                        </div>
+                        <h4 class="text-lg font-bold leading-lg absolute right-0 bottom-0 md:static">NT$350</h4>
+                        <div class="hidden md:flex md:flex-row items-center">
+                            <a href="#" class="material-icons hover:text-primary-light md:order-last md:ml-4">
+                                add
+                            </a>
+                            <span class="text-lg font-bold">01</span>
+                            <a href="#" class="material-icons hover:text-primary-light md:order-first md:mr-4">
+                                remove
+                            </a>
+                        </div>
+                        <a href="#"
+                            class="material-icons hover:text-secondary-400 absolute right-0 top-0 md:static">close</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid grid-cols-12 gap-5 md:gap-13">
+        <div class="col-end-13 col-span-6 md:col-end-13 md:col-span-5 lg:col-end-13 lg:col-span-4">
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-lg font-medium leading-xl">小計</span>
+                <span class="text-lg font-medium leading-base">NT$1050</span>
+            </div>
+            <a href="./checkout_step2.html"
+                class="btn btn-primary-light hover-telesto-primary flex justify-center px-12"><span><span>下一步</span></span>
+            </a>
+        </div>
+    </div>
+</section>

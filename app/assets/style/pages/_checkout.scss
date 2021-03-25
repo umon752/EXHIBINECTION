@@ -1,0 +1,94 @@
+// checkout_共用
+.stepBar {
+    @apply relative;
+
+    &::before {
+        content: '';
+        height: 3px;
+        @apply w-full bg-primary-light absolute;
+    }
+
+    &__dot {
+        @apply relative w-full;
+
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            top: -2.5px;
+            left: 50%;
+            @apply rounded-full bg-primary-light absolute;
+        }
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            top: -1.5px;
+            left: 50%;
+            transform: translateX(1px);
+            @apply rounded-full bg-white absolute;
+        }
+
+        &--active {
+            &::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                top: -1.5px;
+                left: 50%;
+                transform: translateX(1px);
+                @apply rounded-full bg-primary-light absolute;
+            }
+
+            .stepBar__text {
+                @apply font-bold;
+            }
+        }
+    }
+
+    &__text {
+        left: 50%;
+        transform: translateX(-50%);
+        @apply absolute mt-2;
+    }
+}
+
+.checkoutImg {
+    @include img-cover(84px);
+}
+
+
+
+// checkout_step1
+.checkoutList {
+    margin-bottom: 89px;
+
+    @screen md {
+        margin-bottom: 218px;
+    }
+}
+
+
+
+// checkout_step3
+.checkoutForm {
+    margin-bottom: 52px;
+
+    @screen md {
+        margin-bottom: 165px;
+    }
+}
+
+
+
+// checkout_step4
+.checkoutStep4 {
+    margin-top: 42px;
+    margin-bottom: 40px;
+
+    @screen md {
+        margin-top: 102px;
+        margin-bottom: 129px;
+    }
+}

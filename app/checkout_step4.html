@@ -1,0 +1,59 @@
+---
+title: 完成訂購 | EXHIBINECTION
+layout: ./app/ejs/layout.ejs
+engine: ejs
+current: checkout_step4
+banner: none
+navbar: normal
+footer: none
+---
+
+<section class="checkoutStep4 container">
+    <div class="grid grid-cols-12 gap-5 md:gap-13">
+        <div class="col-span-12 md:col-start-4 md:col-span-6">
+            <div class="flex flex-col items-center mb-10">
+                <span class="checkoutStep4__icon material-icons text-7xl text-primary mb-3">
+                    check_circle_outline
+                </span>
+                <div class="text-lg leading-xl text-primary">完成訂購</div>
+            </div>
+            <p class="leading-base mb-26">您的展覽憑證代碼為：
+                <span class="block text-2xl leading-2xl text-primary text-center mt-16 mb-19">qr147352</span>
+                恭喜您已完成「2020 台味設計展」的購票手續，請於 2020/06/01 ~ 2020/10/31 於展覽入口頁面輸入「展覽憑證代碼」，經驗證無誤即可瀏覽。
+            </p>
+
+            <!-- btn -->
+            <div class="grid grid-cols-2 gap-5 md:gap-13">
+                <div class="col-span-1">
+                    <a href="./product.html"
+                        class="btn btn-white border border-primary text-primary hover:text-white hover-telesto-primary inline-block w-full"><span><span>繼續瀏覽</span></span>
+                    </a>
+                </div>
+                <div class="col-span-1">
+                    <a href="./index.html"
+                        class="btn btn-primary-light hover-telesto-primary inline-block w-full"><span><span>看展去</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <div class="grid grid-cols-12 gap-5 md:gap-13">
+        <div class="col-span-6 lg:col-span-4">
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-lg font-medium leading-xl">小計</span>
+                <span class="text-lg font-medium leading-base">NT$1050</span>
+            </div>
+            <a href="./checkout_step2.html"
+                class="btn btn-primary-light hover-telesto-primary flex justify-center px-12"><span><span>下一步</span></span>
+            </a>
+        </div>
+    </div> -->
+</section>

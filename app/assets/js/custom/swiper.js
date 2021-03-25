@@ -9,7 +9,7 @@ if (window.screen.width >= 768) {
         // effect: 'coverflow',
         // grabCursor: true,
         // centeredSlides: true,
-        slidesPerView: '3',
+        slidesPerView: 3,
         // centeredSlides: true,
         spaceBetween: 30,
         // coverflowEffect: {
