@@ -32,11 +32,11 @@
 
         &::-webkit-scrollbar {
             width: 3px;
-            @apply bg-secondary-100 rounded-lg;
+            @apply bg-secondary-100 rounded;
         }
 
         &::-webkit-scrollbar-thumb {
-            @apply bg-primary-light rounded-lg;
+            @apply bg-primary-light rounded;
         }
     }
 
