@@ -1,19 +1,52 @@
 "use strict";
 
 /* DOM */
-// addCart
+// loading
+var loading = document.querySelector('.loading');
+var textWrapper = document.querySelector('.js-loadingText');
+var time = 1500; // addCart
+
 var addCartBtn = document.querySelector('.js-addCart');
 var cartList = document.querySelector('.cart');
 var body = document.querySelector('body'); // 讓 hideCart 在 showCart 執行後才可執行
 
 var toggleShow = false;
-/* AOS */
+/* Anime */
 
-AOS.init({
-  easing: 'ease',
-  duration: 600,
-  once: true
-});
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='inline-block'>$&</span>");
+anime.timeline({
+  loop: true
+}).add({
+  targets: '.js-loadingText .inline-block',
+  translateX: [40, 0],
+  translateZ: 0,
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  duration: 1200,
+  delay: function delay(el, i) {
+    return 500 + 30 * i;
+  }
+}).add({
+  targets: '.js-loadingText .inline-block',
+  translateX: [0, -30],
+  opacity: [1, 0],
+  easing: "easeInExpo",
+  duration: 1100,
+  delay: function delay(el, i) {
+    return 100 + 30 * i;
+  }
+}); // loading 消失
+
+setTimeout(function () {
+  loading.classList.add('loading--fadeOut');
+  /* AOS */
+
+  AOS.init({
+    easing: 'ease',
+    duration: 600,
+    once: true
+  });
+}, time);
 /* banner 背景動態效果 */
 
 window.onload = init;
@@ -4829,45 +4862,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 // 當裝置寬度為 768px 時執行 swiper
 if (window.screen.width >= 768) {
-  // swiper.destroy(false);
   var swiper = new Swiper('.swiper-container', {
-    // slidesPerView: 3,
-    // centeredSlides: true,
-    // spaceBetween: 30,
-    // effect: 'coverflow',
-    // grabCursor: true,
-    // centeredSlides: true,
     slidesPerView: 3,
-    // centeredSlides: true,
-    spaceBetween: 30 // coverflowEffect: {
-    //     rotate: 50,
-    //     stretch: 0,
-    //     depth: 100,
-    //     modifier: 1,
-    //     slideShadows: true,
-    // },
-    // pagination: {
-    //     el: '.swiper-pagination',
-    // },
-    // loop: true,
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    // },
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
-    // virtual: {
-    //     slides: (function () {
-    //         var slides = [];
-    //         for (var i = 0; i < 600; i += 1) {
-    //             slides.push('Slide ' + (i + 1));
-    //         }
-    //         return slides;
-    //     }()),
-    // },
-
+    spaceBetween: 30
   });
 }
 //# sourceMappingURL=all.js.map

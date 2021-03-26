@@ -11310,6 +11310,10 @@ input[type="submit"] {
   z-index: 20;
 }
 
+.z-25{
+  z-index: 25;
+}
+
 .z-30{
   z-index: 30;
 }
@@ -11320,6 +11324,14 @@ input[type="submit"] {
 
 .z-50{
   z-index: 50;
+}
+
+.z-75{
+  z-index: 75;
+}
+
+.z-100{
+  z-index: 100;
 }
 
 .z-auto{
@@ -15651,6 +15663,14 @@ input[type="submit"] {
   }
 }
 
+.loading--fadeOut {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
 .banner {
   height: 480px;
   position: relative;
@@ -15852,14 +15872,14 @@ input[type="submit"] {
   --bg-opacity: 1;
   background-color: #EFEFEF;
   background-color: rgba(239, 239, 239, var(--bg-opacity));
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .cart__list::-webkit-scrollbar-thumb {
   --bg-opacity: 1;
   background-color: #E31277;
   background-color: rgba(227, 18, 119, var(--bg-opacity));
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .cart__img {
@@ -24349,6 +24369,10 @@ input[type="submit"] {
     z-index: 20;
   }
 
+  .sm\:z-25{
+    z-index: 25;
+  }
+
   .sm\:z-30{
     z-index: 30;
   }
@@ -24359,6 +24383,14 @@ input[type="submit"] {
 
   .sm\:z-50{
     z-index: 50;
+  }
+
+  .sm\:z-75{
+    z-index: 75;
+  }
+
+  .sm\:z-100{
+    z-index: 100;
   }
 
   .sm\:z-auto{
@@ -36423,6 +36455,10 @@ input[type="submit"] {
     z-index: 20;
   }
 
+  .md\:z-25{
+    z-index: 25;
+  }
+
   .md\:z-30{
     z-index: 30;
   }
@@ -36433,6 +36469,14 @@ input[type="submit"] {
 
   .md\:z-50{
     z-index: 50;
+  }
+
+  .md\:z-75{
+    z-index: 75;
+  }
+
+  .md\:z-100{
+    z-index: 100;
   }
 
   .md\:z-auto{
@@ -48497,6 +48541,10 @@ input[type="submit"] {
     z-index: 20;
   }
 
+  .lg\:z-25{
+    z-index: 25;
+  }
+
   .lg\:z-30{
     z-index: 30;
   }
@@ -48507,6 +48555,14 @@ input[type="submit"] {
 
   .lg\:z-50{
     z-index: 50;
+  }
+
+  .lg\:z-75{
+    z-index: 75;
+  }
+
+  .lg\:z-100{
+    z-index: 100;
   }
 
   .lg\:z-auto{
@@ -60571,6 +60627,10 @@ input[type="submit"] {
     z-index: 20;
   }
 
+  .xl\:z-25{
+    z-index: 25;
+  }
+
   .xl\:z-30{
     z-index: 30;
   }
@@ -60581,6 +60641,14 @@ input[type="submit"] {
 
   .xl\:z-50{
     z-index: 50;
+  }
+
+  .xl\:z-75{
+    z-index: 75;
+  }
+
+  .xl\:z-100{
+    z-index: 100;
   }
 
   .xl\:z-auto{
