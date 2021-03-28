@@ -2767,7 +2767,7 @@ video {
 @font-face {
   font-family: NotoSansCJKtc;
 
-  src: local("Noto Sans CJK TC Light"), local("NotoSansCJKtc-Light"), url(../fonts/NotoSansCJKtc-Light.otf);
+  src: local("Noto Sans CJK TC Light"), local("NotoSansCJKtc-Light"), url("../fonts/NotoSansCJKtc-Light.otf") format("opentype");
 
   font-weight: 300;
 }
@@ -2775,7 +2775,7 @@ video {
 @font-face {
   font-family: NotoSansCJKtc;
 
-  src: local("Noto Sans CJK TC Regular"), local("NotoSansCJKtc-Regular"), url(../fonts/NotoSansCJKtc-Regular.otf);
+  src: local("Noto Sans CJK TC Regular"), local("NotoSansCJKtc-Regular"), url("../fonts/NotoSansCJKtc-Regular.otf") format("opentype");
 
   font-weight: 400;
 }
@@ -2783,7 +2783,7 @@ video {
 @font-face {
   font-family: NotoSansCJKtc;
 
-  src: local("Noto Sans CJK TC Medium"), local("NotoSansCJKtc-Medium"), url(../fonts/NotoSansCJKtc-Medium.otf);
+  src: local("Noto Sans CJK TC Medium"), local("NotoSansCJKtc-Medium"), url("../fonts/NotoSansCJKtc-Medium.otf") format("opentype");
 
   font-weight: 500;
 }
@@ -2791,7 +2791,7 @@ video {
 @font-face {
   font-family: NotoSansCJKtc;
 
-  src: local("Noto Sans CJK TC Bold"), local("NotoSansCJKtc-Bold"), url(../fonts/NotoSansCJKtc-Bold.otf);
+  src: local("Noto Sans CJK TC Bold"), local("NotoSansCJKtc-Bold"), url("../fonts/NotoSansCJKtc-Bold.otf") format("opentype");
 
   font-weight: 700;
 }
