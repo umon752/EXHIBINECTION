@@ -5,7 +5,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Light"),
         local("NotoSansCJKtc-Light"),
-        url(NotoSansCJKtc-Light.otf);
+        url(../fonts/NotoSansCJKtc-Light.otf);
     font-weight: 300;
 }
 
@@ -13,7 +13,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Regular"),
         local("NotoSansCJKtc-Regular"),
-        url(NotoSansCJKtc-Regular.otf);
+        url(../fonts/NotoSansCJKtc-Regular.otf);
     font-weight: 400;
 }
 
@@ -21,7 +21,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Medium"),
         local("NotoSansCJKtc-Medium"),
-        url(NotoSansCJKtc-Medium.otf);
+        url(../fonts/NotoSansCJKtc-Medium.otf);
     font-weight: 500;
 }
 
@@ -29,7 +29,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Bold"),
         local("NotoSansCJKtc-Bold"),
-        url(NotoSansCJKtc-Bold.otf);
+        url(../fonts/NotoSansCJKtc-Bold.otf);
     font-weight: 700;
 }
 

@@ -51,14 +51,6 @@ setTimeout(function () {
 
 
 
-
-
-
-
-
-
-
-
 /* banner 背景動態效果 */
 window.onload = init;
 const banner = document.getElementsByClassName('banner__img')[0];
@@ -72,6 +64,30 @@ function init() {
     bannerItem[i].style.animationDelay = duration - 50 + 'ms';
   }
 }
+
+
+
+/* swiper */
+// 當裝置寬度為 768px 時執行 swiper
+if (window.screen.width >= 768) {
+  const swiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 2000,
+    },
+    slidesPerView: 3,
+    spaceBetween: 30
+  });
+
+  // 滑鼠摸到暫停輪播
+  swiper.el.onmouseover = function () {
+    swiper.autoplay.stop();
+  };
+  // 滑鼠離開繼續輪播
+  swiper.el.onmouseleave = function () {
+    swiper.autoplay.start();
+  };
+}
+
 
 
 /* cartToggle*/

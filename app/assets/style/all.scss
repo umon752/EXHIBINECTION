@@ -2,14 +2,18 @@
 @import '../../../node_modules/aos/dist/aos';
 @import "../../../node_modules/swiper/swiper-bundle";
 
+
+
 // 載入 tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+// 載入 helpers
 @import './helpers/helpers';
-// @import '../../../node_modules/material-icons/css/material-icons.min';
-// @import './vendors/material-icons.min';
+
 
 
 @layer base {
@@ -25,6 +29,8 @@
 @layer utilities {
   @import './utilities/utilities';
 }
+
+
 
 // 載入 layout
 @import './layout/loading';
