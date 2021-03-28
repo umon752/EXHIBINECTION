@@ -5,7 +5,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Light"),
         local("NotoSansCJKtc-Light"),
-        url(../fonts/NotoSansCJKtc-Light.otf);
+        url("../fonts/NotoSansCJKtc-Light.otf") format("opentype");
     font-weight: 300;
 }
 
@@ -13,7 +13,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Regular"),
         local("NotoSansCJKtc-Regular"),
-        url(../fonts/NotoSansCJKtc-Regular.otf);
+        url("../fonts/NotoSansCJKtc-Regular.otf") format("opentype");
     font-weight: 400;
 }
 
@@ -21,7 +21,7 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Medium"),
         local("NotoSansCJKtc-Medium"),
-        url(../fonts/NotoSansCJKtc-Medium.otf);
+        url("../fonts/NotoSansCJKtc-Medium.otf") format("opentype");
     font-weight: 500;
 }
 
@@ -29,17 +29,20 @@
     font-family: NotoSansCJKtc;
     src: local("Noto Sans CJK TC Bold"),
         local("NotoSansCJKtc-Bold"),
-        url(../fonts/NotoSansCJKtc-Bold.otf);
+        url("../fonts/NotoSansCJKtc-Bold.otf") format("opentype");
     font-weight: 700;
 }
 
 
 
 // HTML
+*:focus {
+    outline: none !important;
+}
+
 body {
     font-family: 'Robot', 'NotoSansCJKtc', sans-serif;
-    @apply overflow-x-hidden;
-    @apply leading-base; // line-height:24px;
+    @apply overflow-x-hidden leading-base font-normal; // line-height:24px;
 }
 
 a {
@@ -48,16 +51,6 @@ a {
 
 button {
     @include hover-linear(300ms);
-
-    &:focus {
-        outline: none;
-    }
-}
-
-input {
-    &:focus {
-        outline: none;
-    }
 }
 
 input[type="submit"] {

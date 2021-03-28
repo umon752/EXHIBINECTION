@@ -1,13 +1,13 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-    // defaultLineHeights: true,
-    // standardFontWeights: true
-  },
+  // future: {
+  //   // removeDeprecatedGapUtilities: true,
+  //   // purgeLayersByDefault: true,
+  //   // defaultLineHeights: true,
+  //   // standardFontWeights: true
+  // },
   purge: {
-    // enabled: true,
-    // content: ['./app/**/*.html', './app/**/*.ejs', './app/**/*.scss', './app/**/*.js'],
+    enabled: true,
+    content: ['./app/**/*.html', './app/**/*.ejs', './app/**/*.scss', './app/**/*.js'],
   },
   theme: {
     screens: {
