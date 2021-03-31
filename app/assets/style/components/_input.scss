@@ -1,6 +1,15 @@
 // input + btn
 .input-group {
-    @apply inline-block;
+    input {
+        width: 170px;
+        -webkit-appearance: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        @screen md {
+            width: auto;
+        }
+    }
 
     button {
         transform: translateX(-5px);
