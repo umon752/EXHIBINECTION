@@ -46,26 +46,24 @@ setTimeout(function () {
     duration: 600,
     once: true
   });
-}, time);
-/* banner 背景動態效果 */
-
-window.onload = init;
-var banner = document.getElementsByClassName('banner__img')[0];
-var bannerItem = document.getElementsByClassName('banner__img__item');
-
-function init() {
-  for (var i = 1; i < 400; i++) {
-    banner.innerHTML += "<div class=\"banner__img__item\"></div>";
-    var duration = Math.random() * 1100;
-    bannerItem[i].style.animationDuration = duration + 250 + 'ms';
-    bannerItem[i].style.animationDelay = duration - 50 + 'ms';
-  }
-}
-/* swiper */
-// 當裝置寬度為 768px 時執行 swiper
-
+}, time); // 當裝置寬度為 768px 時執行
 
 if (window.screen.width >= 768) {
+  var init = function init() {
+    for (var i = 1; i < 400; i++) {
+      banner.innerHTML += "<div class=\"banner__img__item\"></div>";
+      var duration = Math.random() * 1100;
+      bannerItem[i].style.animationDuration = duration + 250 + 'ms';
+      bannerItem[i].style.animationDelay = duration - 50 + 'ms';
+    }
+  };
+  /* swiper */
+
+
+  /* banner 背景動態效果 */
+  window.onload = init;
+  var banner = document.getElementsByClassName('banner__img')[0];
+  var bannerItem = document.getElementsByClassName('banner__img__item');
   var swiper = new Swiper('.swiper-container', {
     autoplay: {
       delay: 2000
