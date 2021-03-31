@@ -2968,8 +2968,14 @@ input[type="submit"] {
   top: -2px;
 }
 
-.input-group {
-  display: inline-block;
+.input-group input {
+  width: 170px;
+}
+
+@media (min-width: 768px) {
+  .input-group input {
+    width: auto;
+  }
 }
 
 .input-group button {
@@ -3211,10 +3217,6 @@ input[type="submit"] {
   font-size: 14px;
 }
 
-.text-base{
-  font-size: 16px;
-}
-
 .text-lg{
   font-size: 20px;
 }
@@ -3274,10 +3276,6 @@ input[type="submit"] {
 .mx-2{
   margin-left: 8px;
   margin-right: 8px;
-}
-
-.ml-0{
-  margin-left: 0px;
 }
 
 .mr-1{
@@ -3491,11 +3489,6 @@ input[type="submit"] {
 .px-20{
   padding-left: 48px;
   padding-right: 48px;
-}
-
-.px-21{
-  padding-left: 52px;
-  padding-right: 52px;
 }
 
 .pr-4{
@@ -5005,6 +4998,11 @@ input[type="submit"] {
   .md\:px-14{
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .md\:px-21{
+    padding-left: 52px;
+    padding-right: 52px;
   }
 
   .md\:px-22{
