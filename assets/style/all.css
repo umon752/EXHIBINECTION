@@ -3651,10 +3651,6 @@ input[type="submit"] {
   white-space: nowrap;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
 .w-2\/4{
   width: 50%;
 }
@@ -3690,13 +3686,6 @@ input[type="submit"] {
 .gap-5{
   grid-gap: 14px;
   gap: 14px;
-}
-
-.gap-x-4{
-  grid-column-gap: 12px;
-  -webkit-column-gap: 12px;
-     -moz-column-gap: 12px;
-          column-gap: 12px;
 }
 
 .grid-cols-2{
@@ -4971,6 +4960,10 @@ input[type="submit"] {
     margin-bottom: 4px;
   }
 
+  .md\:mr-3{
+    margin-right: 10px;
+  }
+
   .md\:mr-4{
     margin-right: 12px;
   }
@@ -5080,13 +5073,6 @@ input[type="submit"] {
   .md\:gap-13{
     grid-gap: 30px;
     gap: 30px;
-  }
-
-  .md\:gap-x-2{
-    grid-column-gap: 8px;
-    -webkit-column-gap: 8px;
-       -moz-column-gap: 8px;
-            column-gap: 8px;
   }
 
   .md\:grid-cols-8{
