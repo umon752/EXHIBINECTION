@@ -4552,8 +4552,10 @@ input[type="submit"] {
   }
 }
 
-.detail {
-  height: 256px;
+@media (min-width: 768px) {
+  .detail {
+    height: 256px;
+  }
 }
 
 .detailBanner {
