@@ -2835,6 +2835,12 @@ button {
           transition-duration: 300ms;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 input[type="submit"] {
   cursor: pointer;
   -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
@@ -2970,7 +2976,6 @@ input[type="submit"] {
 
 .input-group input {
   width: 170px;
-  -webkit-appearance: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -4406,42 +4411,40 @@ input[type="submit"] {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .banner {
-    background-color: black;
-    background-image: none;
-    position: relative;
-    width: 100%;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-perspective: 500px;
-            perspective: 500px;
-  }
+.js-bannerEffect {
+  background-color: black;
+  background-image: none;
+  position: relative;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
 
-  .banner__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
+.js-bannerEffect .banner__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 
-  .banner__img__item {
-    position: relative;
-    display: block;
-    width: 4%;
-    height: 50px;
-    -webkit-animation: animate 2s ease-in-out forwards;
-            animation: animate 2s ease-in-out forwards;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-  }
+.js-bannerEffect .banner__img__item {
+  position: relative;
+  display: block;
+  width: 4%;
+  height: 50px;
+  -webkit-animation: animate 2s ease-in-out forwards;
+          animation: animate 2s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes animate {

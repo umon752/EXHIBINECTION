@@ -49,21 +49,29 @@ setTimeout(function () {
 }, time); // 當裝置寬度為 768px 時執行
 
 if (window.screen.width >= 768) {
-  var init = function init() {
-    for (var i = 1; i < 400; i++) {
-      banner.innerHTML += "<div class=\"banner__img__item\"></div>";
-      var duration = Math.random() * 1100;
-      bannerItem[i].style.animationDuration = duration + 250 + 'ms';
-      bannerItem[i].style.animationDelay = duration - 50 + 'ms';
-    }
-  };
+  var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  var isEdge = window.navigator.userAgent.indexOf("Edge") !== -1;
+
+  if (isChrome || isEdge) {
+    var init = function init() {
+      for (var i = 1; i < 400; i++) {
+        bannerImg.innerHTML += "<div class=\"banner__img__item\"></div>";
+        var duration = Math.random() * 1100;
+        bannerItem[i].style.animationDuration = duration + 250 + 'ms';
+        bannerItem[i].style.animationDelay = duration - 50 + 'ms';
+      }
+    };
+
+    /* banner 背景動態效果 */
+    var banner = document.querySelector('.banner');
+    var bannerImg = document.getElementsByClassName('banner__img')[0];
+    var bannerItem = document.getElementsByClassName('banner__img__item');
+    banner.classList.add('js-bannerEffect');
+    window.onload = init;
+  }
   /* swiper */
 
 
-  /* banner 背景動態效果 */
-  window.onload = init;
-  var banner = document.getElementsByClassName('banner__img')[0];
-  var bannerItem = document.getElementsByClassName('banner__img__item');
   var swiper = new Swiper('.swiper-container', {
     autoplay: {
       delay: 2000
