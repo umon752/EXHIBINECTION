@@ -53,19 +53,29 @@ setTimeout(function () {
 
 // 當裝置寬度為 768px 時執行
 if (window.screen.width >= 768) {
-  /* banner 背景動態效果 */
-  window.onload = init;
-  const banner = document.getElementsByClassName('banner__img')[0];
-  const bannerItem = document.getElementsByClassName('banner__img__item');
+  const isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  const isEdge = window.navigator.userAgent.indexOf("Edge") !== -1;
 
-  function init() {
-    for (let i = 1; i < 400; i++) {
-      banner.innerHTML += `<div class="banner__img__item"></div>`;
-      const duration = Math.random() * 1100;
-      bannerItem[i].style.animationDuration = duration + 250 + 'ms';
-      bannerItem[i].style.animationDelay = duration - 50 + 'ms';
+  if (isChrome || isEdge) {
+    /* banner 背景動態效果 */
+    const banner = document.querySelector('.banner');
+    const bannerImg = document.getElementsByClassName('banner__img')[0];
+    const bannerItem = document.getElementsByClassName('banner__img__item');
+    banner.classList.add('js-bannerEffect');
+
+    window.onload = init;
+
+    function init() {
+      for (let i = 1; i < 400; i++) {
+        bannerImg.innerHTML += `<div class="banner__img__item"></div>`;
+        const duration = Math.random() * 1100;
+        bannerItem[i].style.animationDuration = duration + 250 + 'ms';
+        bannerItem[i].style.animationDelay = duration - 50 + 'ms';
+      }
     }
   }
+
+
 
   /* swiper */
   const swiper = new Swiper('.swiper-container', {

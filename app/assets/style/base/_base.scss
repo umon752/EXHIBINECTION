@@ -53,6 +53,12 @@ button {
     @include hover-linear(300ms);
 }
 
+input {
+    -webkit-appearance: none; // Safari 和 Chrome，於 iOS 移除內建樣式
+    -moz-appearance: none; // Firefox
+    appearance: none;
+}
+
 input[type="submit"] {
     @apply cursor-pointer;
     @include hover-linear(300ms);

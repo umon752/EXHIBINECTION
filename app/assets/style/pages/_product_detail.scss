@@ -1,5 +1,7 @@
 .detail {
-    height: 256px;
+    @screen md {
+        height: 256px;
+    }
 }
 
 .detailBanner {
