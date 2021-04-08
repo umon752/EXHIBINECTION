@@ -2,19 +2,19 @@
 
 /* DOM */
 // loading
-var loading = document.querySelector('.loading');
+var loading = document.querySelector('.js-loading');
 var textWrapper = document.querySelector('.js-loadingText');
 var time = 1500; // addCart
 
 var addCartBtn = document.querySelector('.js-addCart');
-var cartList = document.querySelector('.cart');
+var cartList = document.querySelector('.js-cart');
 var body = document.querySelector('body'); // 讓 hideCart 在 showCart 執行後才可執行
 
 var toggleShow = false;
 /* Anime */
 
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='inline-block'>$&</span>");
-anime.timeline({
+var animation = anime.timeline({
   loop: true
 }).add({
   targets: '.js-loadingText .inline-block',
@@ -38,7 +38,9 @@ anime.timeline({
 }); // loading 消失
 
 setTimeout(function () {
-  loading.classList.add('loading--fadeOut');
+  loading.classList.add('loading--fadeOut'); // Anime 停止
+
+  animation.pause();
   /* AOS */
 
   AOS.init({
@@ -50,7 +52,7 @@ setTimeout(function () {
 
 if (window.screen.width >= 768) {
   var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-  var isEdge = window.navigator.userAgent.indexOf("Edge") !== -1;
+  var isEdge = window.navigator.userAgent.indexOf("Edge") !== -1; // 只有在 Chrome 和 Edge 瀏覽器時才會執行背景動態效果 (僅 Chrome 和 Edge支 援)
 
   if (isChrome || isEdge) {
     var init = function init() {
@@ -72,7 +74,7 @@ if (window.screen.width >= 768) {
   /* swiper */
 
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.js-swipwer-product', {
     autoplay: {
       delay: 2000
     },
