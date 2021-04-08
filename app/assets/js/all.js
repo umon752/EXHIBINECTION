@@ -103,6 +103,7 @@ if (window.screen.width >= 768) {
 /* cartToggle*/
 // 顯示 aside
 function showCart(e) {
+  // 讓 body 不會被點擊到
   e.stopPropagation();
   cartList.classList.add('cart--toggle');
   toggleShow = true;
@@ -110,6 +111,7 @@ function showCart(e) {
 
 // 讓 aside 區域點擊不會被 hideCart 隱藏
 function unClick(e) {
+  // 讓 body 不會被點擊到
   e.stopPropagation();
 }
 
