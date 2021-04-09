@@ -56,6 +56,8 @@ if (window.screen.width >= 768) {
 
   if (isChrome || isEdge) {
     var init = function init() {
+      banner.classList.add('js-bannerEffect');
+
       for (var i = 1; i < 400; i++) {
         bannerImg.innerHTML += "<div class=\"banner__img__item\"></div>";
         var duration = Math.random() * 1100;
@@ -68,7 +70,6 @@ if (window.screen.width >= 768) {
     var banner = document.querySelector('.banner');
     var bannerImg = document.getElementsByClassName('banner__img')[0];
     var bannerItem = document.getElementsByClassName('banner__img__item');
-    banner.classList.add('js-bannerEffect');
     window.onload = init;
   }
   /* swiper */
