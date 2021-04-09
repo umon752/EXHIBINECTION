@@ -63,11 +63,12 @@ if (window.screen.width >= 768) {
     const banner = document.querySelector('.banner');
     const bannerImg = document.getElementsByClassName('banner__img')[0];
     const bannerItem = document.getElementsByClassName('banner__img__item');
-    banner.classList.add('js-bannerEffect');
 
     window.onload = init;
 
     function init() {
+      banner.classList.add('js-bannerEffect');
+
       for (let i = 1; i < 400; i++) {
         bannerImg.innerHTML += `<div class="banner__img__item"></div>`;
         const duration = Math.random() * 1100;
