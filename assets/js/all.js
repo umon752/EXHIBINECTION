@@ -1,49 +1,7 @@
 "use strict";
 
-// DOM 
-var loading = document.querySelector('.js-loading');
-var textWrapper = document.querySelector('.js-loadingText'); // Anime Loading 動畫
-
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='inline-block'>$&</span>");
-var animation = anime.timeline({
-  loop: true
-}).add({
-  targets: '.js-loadingText .inline-block',
-  translateX: [40, 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  easing: "easeOutExpo",
-  duration: 1200,
-  delay: function delay(el, i) {
-    return 500 + 30 * i;
-  }
-}).add({
-  targets: '.js-loadingText .inline-block',
-  translateX: [0, -30],
-  opacity: [1, 0],
-  easing: "easeInExpo",
-  duration: 1100,
-  delay: function delay(el, i) {
-    return 100 + 30 * i;
-  }
-});
-
-window.onload = function () {
-  // Loading 消失
-  loading.classList.add('loading--fadeOut'); // Anime 停止
-
-  animation.pause(); // 載入 AOS 
-
-  AOS.init({
-    easing: 'ease',
-    duration: 600,
-    once: true
-  }); // 載入 Banner 動態效果
-
-  bannerEffect();
-};
-
 function init() {
+  loading();
   swiper();
   detailPage();
 }
@@ -51,11 +9,57 @@ function init() {
 ;
 init();
 
+function loading() {
+  // DOM 
+  var loading = document.querySelector('.js-loading');
+  var textWrapper = document.querySelector('.js-loadingText'); // Anime Loading 動畫
+
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='inline-block'>$&</span>");
+  var animation = anime.timeline({
+    loop: true
+  }).add({
+    targets: '.js-loadingText .inline-block',
+    translateX: [40, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: function delay(el, i) {
+      return 500 + 30 * i;
+    }
+  }).add({
+    targets: '.js-loadingText .inline-block',
+    translateX: [0, -30],
+    opacity: [1, 0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: function delay(el, i) {
+      return 100 + 30 * i;
+    }
+  });
+
+  window.onload = function () {
+    // Loading 消失
+    loading.classList.add('loading--fadeOut'); // Anime 停止
+
+    animation.pause(); // 載入 AOS 
+
+    AOS.init({
+      easing: 'ease',
+      duration: 600,
+      once: true
+    }); // 載入 Banner 動態效果
+
+    bannerEffect();
+  };
+}
+
 function bannerEffect() {
   // 當裝置寬度為 768px 時
   if (window.screen.width >= 768) {
     // 只在 index 時執行
     if (window.location.pathname === '/EXHIBINECTION/' || window.location.pathname === '/' || window.location.pathname.match('index')) {
+      // DOM
       var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
       var isEdge = window.navigator.userAgent.indexOf("Edge") !== -1;
       var banner = document.querySelector('.banner');
