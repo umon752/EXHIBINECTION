@@ -2971,7 +2971,7 @@ input[type="submit"] {
 .badges-count {
   position: absolute;
   right: auto;
-  top: -2px;
+  top: -3px;
 }
 
 .input-group input {
@@ -4508,6 +4508,21 @@ input[type="submit"] {
   width: 100%;
 }
 
+.hotImg {
+  height: 345px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hotImg {
+    height: 350px;
+  }
+}
+
 .introImg {
   height: 345px;
   -o-object-fit: cover;
@@ -4518,6 +4533,12 @@ input[type="submit"] {
 }
 
 @media (min-width: 768px) {
+  .introImg {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
   .introImg {
     height: 350px;
   }
