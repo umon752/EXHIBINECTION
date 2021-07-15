@@ -7,7 +7,7 @@
 }
 
 .introImg {
-    @include img-cover(345px);
+    @include img-cover(320px);
 
     @screen md {
         height: 250px;

@@ -85,16 +85,24 @@ function bannerEffect() {
 function swiper() {
   // 只在 index、product、product_detail 時執行
   if (window.location.pathname === '/EXHIBINECTION/' || window.location.pathname === '/' || window.location.pathname.match('index') || window.location.pathname.match('/product')) {
-    // 當裝置寬度為 768px 時執行
-    if (window.screen.width >= 768) {
 
       // 載入 Swiper 
       const swiper = new Swiper('.js-swipwer-product', {
         autoplay: {
           delay: 2000,
         },
-        slidesPerView: 3,
-        spaceBetween: 30
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        breakpoints: {
+          640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+          },
+          768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+          },
+      }
       });
 
       // 滑鼠摸到暫停輪播
@@ -107,7 +115,6 @@ function swiper() {
         swiper.autoplay.start();
       };
 
-    }
   }
 };
 
