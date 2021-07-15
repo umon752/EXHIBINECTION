@@ -4524,7 +4524,7 @@ input[type="submit"] {
 }
 
 .introImg {
-  height: 345px;
+  height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
