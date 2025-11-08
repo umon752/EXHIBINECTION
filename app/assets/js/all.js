@@ -49,7 +49,7 @@ function loading() {
     });
 
     // 載入 Banner 動態效果
-    bannerEffect();
+    // bannerEffect();
 
   };
 }
