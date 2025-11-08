@@ -49,8 +49,7 @@ function loading() {
       duration: 600,
       once: true
     }); // 載入 Banner 動態效果
-
-    bannerEffect();
+    // bannerEffect();
   };
 }
 
